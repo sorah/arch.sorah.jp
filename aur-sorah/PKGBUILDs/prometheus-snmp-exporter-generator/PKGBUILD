@@ -1,0 +1,28 @@
+# Maintainer: Sorah Fukumori <her@sorah.jp>
+# Orig-Maintainer: Nils Czernia <nils@czserver.de>
+
+pkgname=prometheus-snmp-exporter-generator
+pkgver=0.15.0
+pkgrel=1
+pkgdesc="Generator parse MIBs and generates configs for the snmp_exporter"
+arch=('any')
+url="https://github.com/prometheus/snmp_exporter/tree/master/generator"
+license=('Apache')
+makedepends=('go-pie' 'git')
+depends=('net-snmp')
+source=("https://github.com/prometheus/snmp_exporter/archive/v${pkgver}.tar.gz")
+
+build() {
+    cd "snmp_exporter-${pkgver}"
+    go build \
+        -gcflags "all=-trimpath=$PWD" \
+        -asmflags "all=-trimpath=$PWD" \
+        -ldflags "-extldflags $LDFLAGS" \
+        -o prometheus_snmp_exporter_generator ./generator/
+}
+
+package() {
+    cd "snmp_exporter-${pkgver}"
+    install -Dm755 "prometheus_snmp_exporter_generator" "${pkgdir}/usr/bin/prometheus_snmp_exporter_generator"
+}
+sha512sums=('1050a25d12a8201deab0ab7ea95dc35e250954a321d14251c10f87b016c879cf036e01f4043e3463607200381de63f12ea6bcf094dea2939707545f978c2675b')

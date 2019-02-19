@@ -2,3 +2,6 @@
 	path = aur-sorah/PKGBUILDs/h2o
 	url = https://aur.archlinux.org/h2o.git
 
+[submodule "aur-sorah/PKGBUILDs/prometheus-exporter-proxy"]
+	path = aur-sorah/PKGBUILDs/prometheus-exporter-proxy
+	url = https://aur.archlinux.org/prometheus-exporter-proxy.git
