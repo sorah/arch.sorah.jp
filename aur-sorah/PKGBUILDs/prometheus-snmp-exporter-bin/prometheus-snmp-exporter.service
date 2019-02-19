@@ -1,0 +1,13 @@
+[Unit]
+Description=Prometheus Exporter for SNMP metrics
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+Group=nogroup
+Restart=always
+ExecStart=/usr/bin/prometheus_snmp_exporter --config.file /etc/prometheus/snmp.yml
+
+[Install]
+WantedBy=multi-user.target
