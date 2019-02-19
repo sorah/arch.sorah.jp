@@ -1,0 +1,4 @@
+[submodule "aur-sorah/PKGBUILDs/h2o"]
+	path = aur-sorah/PKGBUILDs/h2o
+	url = https://aur.archlinux.org/h2o.git
+
