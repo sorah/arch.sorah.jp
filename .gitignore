@@ -1,0 +1,5 @@
+*.tar.gz
+*.tar.xz
+/archroot/
+/aur-sorah/aur-sorah/
+*.log
