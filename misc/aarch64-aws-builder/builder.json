@@ -1,0 +1,72 @@
+{
+  "description": "builder",
+  "variables": {
+    "imagename": "{{isotime `20060102`}}-{{uuid}}",
+    "subnet_id": null,
+    "rootfs_tarball_url": "http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz",
+    "rootfs_signature_url": "http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz.sig",
+    "aws_region": "us-west-2"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "{{user `aws_region`}}",
+      "source_ami_filter": {
+        "filters": {
+          "virtualization-type": "hvm",
+          "root-device-type": "ebs",
+          "name": "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-arm64-server-*"
+        },
+        "owners": ["099720109477"],
+        "most_recent": true
+      },
+      "subnet_id": "{{user `subnet_id`}}",
+      "associate_public_ip_address": true,
+      "instance_type": "a1.xlarge",
+      "ssh_username": "ubuntu",
+      "ssh_port": 22,
+      "ami_name": "arch-aarch64-builder-{{user `imagename`}}",
+      "ami_regions": [
+        "us-west-2"
+      ],
+      "tags": {
+        "NkmiAmi": "aarch64-builder"
+      },
+      "launch_block_device_mappings": [
+        {
+          "device_name": "/dev/sda1",
+          "volume_type": "gp2",
+          "volume_size": 8,
+          "delete_on_termination": true
+        }
+      ]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "./remote/prepare.sh",
+      "destination": "/home/ubuntu/prepare.sh"
+    },
+    {
+      "type": "file",
+      "source": "./remote/prepare-chroot.sh",
+      "destination": "/home/ubuntu/prepare-chroot.sh"
+    },
+    {
+      "type": "shell",
+      "inline_shebang": "/bin/bash",
+      "inline": [
+        "set -e",
+        "set -x",
+        "chmod +x /home/ubuntu/*.sh",
+        "sudo -H /home/ubuntu/prepare.sh",
+        "echo | sudo tee /etc/machine-id",
+        "rm -fv ~/.ssh/authorized_keys",
+        "sudo rm -fv /etc/ssh/ssh_host_*"
+      ]
+    }
+  ],
+  "post-processors": [
+  ]
+}

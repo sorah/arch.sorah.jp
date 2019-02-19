@@ -1,0 +1,91 @@
+{
+  "description": "build",
+  "variables": {
+    "pkgbuild_path": null,
+    "subnet_id": null,
+    "instance_type": "a1.xlarge",
+    "aws_region": "us-west-2"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebsvolume",
+      "region": "{{user `aws_region`}}",
+      "source_ami_filter": {
+        "filters": {
+          "state": "available",
+          "virtualization-type": "hvm",
+          "root-device-type": "ebs",
+          "name": "arch-aarch64-builder-*"
+        },
+        "owners": ["self"],
+        "most_recent": true
+      },
+      "subnet_id": "{{user `subnet_id`}}",
+      "associate_public_ip_address": true,
+      "instance_type": "{{user `instance_type`}}",
+      "ssh_username": "ubuntu",
+      "ssh_port": 22,
+      "ebs_volumes": [
+      ]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline_shebang": "/bin/bash -xe",
+      "inline": [
+        "mkdir /home/ubuntu/target"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "./remote/build.sh",
+      "destination": "/home/ubuntu/build.sh"
+    },
+    {
+      "type": "file",
+      "source": "./remote/build-chroot.sh",
+      "destination": "/home/ubuntu/build-chroot.sh"
+    },
+    {
+      "type": "file",
+      "source": "./remote/stage.sh",
+      "destination": "/home/ubuntu/stage.sh"
+    },
+    {
+      "type": "file",
+      "source": "{{user `pkgbuild_path`}}",
+      "destination": "/home/ubuntu/target"
+    },
+    {
+      "type": "file",
+      "source": "pacman.conf",
+      "destination": "/home/ubuntu/pacman.conf"
+    },
+    {
+      "type": "file",
+      "source": "makepkg.conf",
+      "destination": "/home/ubuntu/makepkg.conf"
+    },
+    {
+      "type": "shell",
+      "inline_shebang": "/bin/bash",
+      "inline": [
+        "set -e",
+        "set -x",
+        "find /home/ubuntu/target",
+        "chmod +x /home/ubuntu/*.sh",
+        "sudo -H /home/ubuntu/build.sh",
+        "./stage.sh"
+      ]
+    },
+    {
+      "type": "file",
+      "direction": "download",
+      "source": "/home/ubuntu/stage/",
+      "destination": "./out/"
+    }
+  ],
+  "post-processors": [
+  ]
+}
