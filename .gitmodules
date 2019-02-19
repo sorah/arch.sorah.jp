@@ -5,3 +5,6 @@
 [submodule "aur-sorah/PKGBUILDs/prometheus-exporter-proxy"]
 	path = aur-sorah/PKGBUILDs/prometheus-exporter-proxy
 	url = https://aur.archlinux.org/prometheus-exporter-proxy.git
+[submodule "aur-sorah/PKGBUILDs/mitamae"]
+	path = aur-sorah/PKGBUILDs/mitamae
+	url = https://aur.archlinux.org/mitamae.git
