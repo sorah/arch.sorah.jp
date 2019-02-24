@@ -5,8 +5,10 @@ After=network.target
 [Service]
 Type=simple
 User=nobody
-Group=nogroup
-Restart=always
+Group=nobody
+ProtectHome=true
+ProtectSystem=strict
+Restart=on-failure
 ExecStart=/usr/bin/prometheus_snmp_exporter --config.file /etc/prometheus/snmp.yml
 
 [Install]

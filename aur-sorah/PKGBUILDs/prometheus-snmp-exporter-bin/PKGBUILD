@@ -4,7 +4,7 @@
 
 pkgname=prometheus-snmp-exporter-bin
 pkgver=0.15.0
-pkgrel=1
+pkgrel=2
 pkgdesc="SNMP Exporter for Prometheus (binary, not built from source)"
 arch=("x86_64" "armv5h" "armv6h" "armv7h" "aarch64")
 url="https://github.com/prometheus/snmp_exporter"
@@ -40,13 +40,14 @@ package() {
     install -D -m0644 "${srcdir}/prometheus-snmp-exporter.service" "${pkgdir}/usr/lib/systemd/system/prometheus-snmp-exporter.service"
     install -D -m644 snmp.yml "${pkgdir}/etc/prometheus/snmp.yml"
 }
-sha512sums_x86_64=('f110532982a5b42b593382fcfce28d21ddf8afe9bba4d2b0f209a13af1ad2d86d200b41fb13414b4bd0ed9d43badbe149f9382c2bff932627c4c894b32d7b24d'
+
+sha512sums_x86_64=('69821e660ed33c9f08a3fedd45ff2a9dd191eb12f69864da8edc04ef9aaf06edf53bf92a8ebef31df17bb4f665353351f12f535b432d4df5ba8d3b249d57ec78'
                    '1421f162f99ba0d3b29539bc97b447f43c42df2383b6c3cf89ec257a1d143edea9d91bbd39fa58c97a1a19e1440c1c6071fe44e20c0fb4584f6ec5d8b34ed7bb')
-sha512sums_armv5h=('f110532982a5b42b593382fcfce28d21ddf8afe9bba4d2b0f209a13af1ad2d86d200b41fb13414b4bd0ed9d43badbe149f9382c2bff932627c4c894b32d7b24d'
+sha512sums_armv5h=('69821e660ed33c9f08a3fedd45ff2a9dd191eb12f69864da8edc04ef9aaf06edf53bf92a8ebef31df17bb4f665353351f12f535b432d4df5ba8d3b249d57ec78'
                    '3ede2a822245d5693c375c7ad89de5cb816e9c49f83e609feb35e292a646d2afa816476b10c50a55c14851f551128d8cbf06cc77beada43243dea291f0f04137')
-sha512sums_armv6h=('f110532982a5b42b593382fcfce28d21ddf8afe9bba4d2b0f209a13af1ad2d86d200b41fb13414b4bd0ed9d43badbe149f9382c2bff932627c4c894b32d7b24d'
+sha512sums_armv6h=('69821e660ed33c9f08a3fedd45ff2a9dd191eb12f69864da8edc04ef9aaf06edf53bf92a8ebef31df17bb4f665353351f12f535b432d4df5ba8d3b249d57ec78'
                    'f115e907e3ad387b2e0145145bbfb92ecb3155690c518f4f56abb1a4ca33b2756f60b68d14f1aa36496212b3eb9625aa58d5e6de5ff8f834f3c7d96d98d6697a')
-sha512sums_armv7h=('f110532982a5b42b593382fcfce28d21ddf8afe9bba4d2b0f209a13af1ad2d86d200b41fb13414b4bd0ed9d43badbe149f9382c2bff932627c4c894b32d7b24d'
+sha512sums_armv7h=('69821e660ed33c9f08a3fedd45ff2a9dd191eb12f69864da8edc04ef9aaf06edf53bf92a8ebef31df17bb4f665353351f12f535b432d4df5ba8d3b249d57ec78'
                    'c8f3303a48ef835ec52dd243da71b3a27831b91355f2b5e2f955e4bc88aff62dc4118d23ca28347f02c6c6026bcaa8faa11e64865cd818138f2dbee837050784')
-sha512sums_aarch64=('f110532982a5b42b593382fcfce28d21ddf8afe9bba4d2b0f209a13af1ad2d86d200b41fb13414b4bd0ed9d43badbe149f9382c2bff932627c4c894b32d7b24d'
+sha512sums_aarch64=('69821e660ed33c9f08a3fedd45ff2a9dd191eb12f69864da8edc04ef9aaf06edf53bf92a8ebef31df17bb4f665353351f12f535b432d4df5ba8d3b249d57ec78'
                     '351ba2c7fb9ef1d68373f69971d7fa1091febe48b70e21595045ffa8616d843957138f9e2b10005e44ba10710d24881cafaa3ca6973772f28446013ecc4a1811')
