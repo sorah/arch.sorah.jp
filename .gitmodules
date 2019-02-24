@@ -8,3 +8,6 @@
 [submodule "aur-sorah/PKGBUILDs/mitamae"]
 	path = aur-sorah/PKGBUILDs/mitamae
 	url = https://aur.archlinux.org/mitamae.git
+[submodule "aur-sorah/PKGBUILDs/prometheus-unbound-exporter-git"]
+	path = aur-sorah/PKGBUILDs/prometheus-unbound-exporter-git
+	url = https://aur.archlinux.org/prometheus-unbound-exporter-git.git
