@@ -63,8 +63,8 @@ Dir.chdir(archdir) do
     pkg_local_path =   "./#{File.basename(pkg_path)}"
     FileUtils.cp pkg_path, pkg_local_path
     cmd "gpg2", "--local-user", package_key, "--detach-sign", pkg_local_path
-    cmd "guzuta", "files-add", "--repo-key", repo_key, pkg_path, "#{name}.files"
-    cmd "guzuta", "repo-add", "--repo-key", repo_key,pkg_path, "#{name}.db"
+    cmd "guzuta", "files-add", "--repo-key", repo_key, pkg_local_path, "#{name}.files"
+    cmd "guzuta", "repo-add", "--repo-key", repo_key, pkg_local_path, "#{name}.db"
 
     s3_put pkg_local_path, region, bucket, "#{name}/os/#{arch}/#{File.basename(pkg_path)}"
     s3_put "#{pkg_local_path}.sig", region, bucket, "#{name}/os/#{arch}/#{File.basename(pkg_path)}.sig"
