@@ -11,3 +11,9 @@
 [submodule "aur-sorah/PKGBUILDs/prometheus-unbound-exporter-git"]
 	path = aur-sorah/PKGBUILDs/prometheus-unbound-exporter-git
 	url = https://aur.archlinux.org/prometheus-unbound-exporter-git.git
+[submodule "aur-sorah/PKGBUILDs/osquery-bin"]
+	path = aur-sorah/PKGBUILDs/osquery-bin
+	url = https://aur.archlinux.org/osquery-bin.git
+[submodule "aur-sorah/PKGBUILDs/kubernetes-bin"]
+	path = aur-sorah/PKGBUILDs/kubernetes-bin
+	url = https://aur.archlinux.org/kubernetes-bin.git
