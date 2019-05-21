@@ -17,3 +17,6 @@
 [submodule "aur-sorah/PKGBUILDs/kubernetes-bin"]
 	path = aur-sorah/PKGBUILDs/kubernetes-bin
 	url = https://aur.archlinux.org/kubernetes-bin.git
+[submodule "aur-sorah/PKGBUILDs/kubernetes"]
+	path = aur-sorah/PKGBUILDs/kubernetes
+	url = https://aur.archlinux.org/kubernetes.git
