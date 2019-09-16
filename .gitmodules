@@ -20,3 +20,6 @@
 [submodule "aur-sorah/PKGBUILDs/kubernetes"]
 	path = aur-sorah/PKGBUILDs/kubernetes
 	url = https://aur.archlinux.org/kubernetes.git
+[submodule "aur-sorah/PKGBUILDs/yenma-git"]
+	path = aur-sorah/PKGBUILDs/yenma-git
+	url = ssh://aur@aur.archlinux.org/yenma-git.git
