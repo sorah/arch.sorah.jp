@@ -23,3 +23,6 @@
 [submodule "aur-sorah/PKGBUILDs/yenma-git"]
 	path = aur-sorah/PKGBUILDs/yenma-git
 	url = ssh://aur@aur.archlinux.org/yenma-git.git
+[submodule "aur-sorah/PKGBUILDs/amazon-ecr-credential-helper"]
+	path = aur-sorah/PKGBUILDs/amazon-ecr-credential-helper
+	url = https://aur.archlinux.org/amazon-ecr-credential-helper.git
