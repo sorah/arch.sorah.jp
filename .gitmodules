@@ -26,3 +26,6 @@
 [submodule "aur-sorah/PKGBUILDs/amazon-ecr-credential-helper"]
 	path = aur-sorah/PKGBUILDs/amazon-ecr-credential-helper
 	url = https://aur.archlinux.org/amazon-ecr-credential-helper.git
+[submodule "aur-sorah/PKGBUILDs/pigpio"]
+	path = aur-sorah/PKGBUILDs/pigpio
+	url = aur@aur.archlinux.org:pigpio.git
