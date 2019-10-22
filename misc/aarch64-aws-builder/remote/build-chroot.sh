@@ -1,4 +1,5 @@
 #!/bin/bash -xe
+echo 'Server = http://au.mirror.archlinuxarm.org/$arch/$repo' > /etc/pacman.d/mirrorlist  
 pacman -Syyu --noconfirm
 cd /work
 chown -R buildbot:buildbot .
