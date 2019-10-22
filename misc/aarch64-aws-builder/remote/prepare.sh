@@ -1,6 +1,6 @@
 #!/bin/bash -xe
 cd /root
-apt-get update && apt-get install -y curl git-core m4 make libarchive-tools awscli
+apt-get update && apt-get install -y curl git-core m4 make libarchive-tools awscli asciidoc
 git clone https://git.archlinux.org/arch-install-scripts.git
 (
   cd arch-install-scripts/
