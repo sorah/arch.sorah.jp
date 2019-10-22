@@ -29,3 +29,9 @@
 [submodule "aur-sorah/PKGBUILDs/pigpio"]
 	path = aur-sorah/PKGBUILDs/pigpio
 	url = aur@aur.archlinux.org:pigpio.git
+[submodule "aur-sorah/PKGBUILDs/bgpstream"]
+	path = aur-sorah/PKGBUILDs/bgpstream
+	url = https://aur.archlinux.org/bgpstream.git
+[submodule "aur-sorah/PKGBUILDs/libwandio"]
+	path = aur-sorah/PKGBUILDs/libwandio
+	url = https://aur.archlinux.org/libwandio.git
