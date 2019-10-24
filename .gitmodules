@@ -35,3 +35,6 @@
 [submodule "aur-sorah/PKGBUILDs/libwandio"]
 	path = aur-sorah/PKGBUILDs/libwandio
 	url = https://aur.archlinux.org/libwandio.git
+[submodule "aur-sorah/PKGBUILDs/exabgp"]
+	path = aur-sorah/PKGBUILDs/exabgp
+	url = https://aur.archlinux.org/exabgp.git
