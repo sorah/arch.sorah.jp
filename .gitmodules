@@ -38,3 +38,6 @@
 [submodule "aur-sorah/PKGBUILDs/exabgp"]
 	path = aur-sorah/PKGBUILDs/exabgp
 	url = https://aur.archlinux.org/exabgp.git
+[submodule "aur-sorah/PKGBUILDs/zfs-dkms"]
+	path = aur-sorah/PKGBUILDs/zfs-dkms
+	url = https://aur.archlinux.org/zfs-dkms.git
