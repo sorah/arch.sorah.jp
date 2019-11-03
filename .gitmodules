@@ -44,3 +44,6 @@
 [submodule "aur-sorah/PKGBUILDs/zfs-utils"]
 	path = aur-sorah/PKGBUILDs/zfs-utils
 	url = https://aur.archlinux.org/zfs-utils.git
+[submodule "aur-sorah/PKGBUILDs/cfssl"]
+	path = aur-sorah/PKGBUILDs/cfssl
+	url = https://aur.archlinux.org/cfssl.git
