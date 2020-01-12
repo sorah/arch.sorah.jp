@@ -47,3 +47,48 @@
 [submodule "aur-sorah/PKGBUILDs/cfssl"]
 	path = aur-sorah/PKGBUILDs/cfssl
 	url = https://aur.archlinux.org/cfssl.git
+[submodule "aur-nonfree-sorah/PKGBUILDs/ffmpeg-full"]
+	path = aur-nonfree-sorah/PKGBUILDs/ffmpeg-full
+	url = https://aur.archlinux.org/ffmpeg-full.git
+[submodule "aur-nonfree-sorah/PKGBUILDs/decklink-sdk"]
+	path = aur-nonfree-sorah/PKGBUILDs/decklink-sdk
+	url = https://aur.archlinux.org/decklink-sdk.git
+[submodule "aur-sorah/PKGBUILDs/chromaprint-fftw"]
+	path = aur-sorah/PKGBUILDs/chromaprint-fftw
+	url = https://aur.archlinux.org/chromaprint-fftw.git
+[submodule "aur-sorah/PKGBUILDs/davs2"]
+	path = aur-sorah/PKGBUILDs/davs2
+	url = https://aur.archlinux.org/davs2.git
+[submodule "aur-nonfree-sorah/PKGBUILDs/flite1-patched"]
+	path = aur-nonfree-sorah/PKGBUILDs/flite1-patched
+	url = https://aur.archlinux.org/flite1-patched.git
+[submodule "aur-sorah/PKGBUILDs/libklvanc-git"]
+	path = aur-sorah/PKGBUILDs/libklvanc-git
+	url = https://aur.archlinux.org/libklvanc-git.git
+[submodule "aur-sorah/PKGBUILDs/openh264"]
+	path = aur-sorah/PKGBUILDs/openh264
+	url = https://aur.archlinux.org/openh264.git
+[submodule "aur-sorah/PKGBUILDs/libopenmpt-svn"]
+	path = aur-sorah/PKGBUILDs/libopenmpt-svn
+	url = https://aur.archlinux.org/libopenmpt-svn.git
+[submodule "aur-sorah/PKGBUILDs/shine"]
+	path = aur-sorah/PKGBUILDs/shine
+	url = https://aur.archlinux.org/shine.git
+[submodule "aur-sorah/PKGBUILDs/vo-amrwbenc"]
+	path = aur-sorah/PKGBUILDs/vo-amrwbenc
+	url = https://aur.archlinux.org/vo-amrwbenc.git
+[submodule "aur-sorah/PKGBUILDs/xavs"]
+	path = aur-sorah/PKGBUILDs/xavs
+	url = https://aur.archlinux.org/xavs.git
+[submodule "aur-sorah/PKGBUILDs/xavs2"]
+	path = aur-sorah/PKGBUILDs/xavs2
+	url = https://aur.archlinux.org/xavs2.git
+[submodule "aur-sorah/PKGBUILDs/pocketsphinx"]
+	path = aur-sorah/PKGBUILDs/pocketsphinx
+	url = https://aur.archlinux.org/pocketsphinx.git
+[submodule "aur-sorah/PKGBUILDs/sphinxbase"]
+	path = aur-sorah/PKGBUILDs/sphinxbase
+	url = https://aur.archlinux.org/sphinxbase.git
+[submodule "aur-sorah/PKGBUILDs/rockchip-mpp"]
+	path = aur-sorah/PKGBUILDs/rockchip-mpp
+	url = https://aur.archlinux.org/rockchip-mpp.git
