@@ -92,3 +92,6 @@
 [submodule "aur-sorah/PKGBUILDs/rockchip-mpp"]
 	path = aur-sorah/PKGBUILDs/rockchip-mpp
 	url = https://aur.archlinux.org/rockchip-mpp.git
+[submodule "aur-sorah/PKGBUILDs/ruby-bundler1.git"]
+	path = aur-sorah/PKGBUILDs/ruby-bundler1
+	url = https://aur.archlinux.org/ruby-bundler1.git
