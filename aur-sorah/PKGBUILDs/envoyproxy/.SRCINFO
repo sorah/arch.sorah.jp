@@ -1,0 +1,20 @@
+pkgbase = envoyproxy
+	pkgdesc = A high performance, open source, general RPC framework that puts mobile and HTTP/2 first.
+	pkgver = 1.12.2
+	pkgrel = 1
+	url = https://envoyproxy.io
+	arch = x86_64
+	license = Apache2
+	makedepends = cmake
+	makedepends = git
+	makedepends = go
+	makedepends = ninja
+	makedepends = perl
+	makedepends = python
+	source = https://github.com/envoyproxy/envoy/archive/v1.12.2.tar.gz
+	source = https://github.com/bazelbuild/bazel/releases/download/1.1.0/bazel-1.1.0-linux-x86_64
+	sha512sums = 883f6b27929d1807d968f8ba97b6931dbbe60ba2761e1af663ed7839889c153c6410867883bc97ba481f40162ea96e66f9505b042cd6ae6dacece653513e0e43
+	sha512sums = 800a734cabc7cacc2f24f12833ecaed768121708f63d057cee08c6ba787c4f6b6d3e32b7fb8a157fb74c721c04d7ce212033e8647f51b8e36324d816c91e4598
+
+pkgname = envoyproxy
+
