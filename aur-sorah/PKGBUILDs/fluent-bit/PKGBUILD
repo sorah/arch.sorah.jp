@@ -4,7 +4,7 @@
 pkgname=fluent-bit
 
 pkgver=1.3.6
-pkgrel=1
+pkgrel=2
 
 pkgdesc='Collect data/logs from different sources, unify and send them to multiple destinations.'
 arch=('x86_64')
@@ -38,6 +38,9 @@ check() {
 package() {
     cd $pkgname-$pkgver/build
     make DESTDIR="$pkgdir/" install
+    mkdir -p $pkgdir/usr/lib
+    mv $pkgdir/lib/systemd $pkgdir/usr/lib/systemd
+    rm -rf $pkgdir/lib
 }
 
 sha256sums=('11d3610d08c2987f85dbe77f3ff802d578534b59da2f16cc947befea7c4cef36')
