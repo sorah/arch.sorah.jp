@@ -98,3 +98,6 @@
 [submodule "aur-sorah/PKGBUILDs/prometheus-junos-exporter"]
 	path = aur-sorah/PKGBUILDs/prometheus-junos-exporter
 	url = aur@aur.archlinux.org:prometheus-junos-exporter.git
+[submodule "aur-sorah/PKGBUILDs/prometheus-remo-exporter"]
+	path = aur-sorah/PKGBUILDs/prometheus-remo-exporter
+	url = aur@aur.archlinux.org:prometheus-remo-exporter.git
