@@ -101,3 +101,6 @@
 [submodule "aur-sorah/PKGBUILDs/prometheus-remo-exporter"]
 	path = aur-sorah/PKGBUILDs/prometheus-remo-exporter
 	url = aur@aur.archlinux.org:prometheus-remo-exporter.git
+[submodule "aur-sorah/PKGBUILDs/mysql"]
+	path = aur-sorah/PKGBUILDs/mysql
+	url = aur@aur.archlinux.org:mysql.git
