@@ -104,3 +104,6 @@
 [submodule "aur-sorah/PKGBUILDs/mysql"]
 	path = aur-sorah/PKGBUILDs/mysql
 	url = aur@aur.archlinux.org:mysql.git
+[submodule "aur-sorah/PKGBUILDs/jsonnet"]
+	path = aur-sorah/PKGBUILDs/jsonnet
+	url = aur@aur.archlinux.org:jsonnet.git
