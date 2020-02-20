@@ -107,3 +107,6 @@
 [submodule "aur-sorah/PKGBUILDs/jsonnet"]
 	path = aur-sorah/PKGBUILDs/jsonnet
 	url = aur@aur.archlinux.org:jsonnet.git
+[submodule "aur-sorah/PKGBUILDs/aws-cli-v2"]
+	path = aur-sorah/PKGBUILDs/aws-cli-v2
+	url = https://aur.archlinux.org/aws-cli-v2.git
