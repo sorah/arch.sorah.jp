@@ -110,3 +110,21 @@
 [submodule "aur-sorah/PKGBUILDs/aws-cli-v2"]
 	path = aur-sorah/PKGBUILDs/aws-cli-v2
 	url = https://aur.archlinux.org/aws-cli-v2.git
+[submodule "aur-nonfree-sorah/PKGBUILDs/unifi"]
+	path = aur-nonfree-sorah/PKGBUILDs/unifi
+	url = https://aur.archlinux.org/unifi.git
+[submodule "aur-nonfree-sorah/PKGBUILDs/mongodb-tools"]
+	path = aur-nonfree-sorah/PKGBUILDs/mongodb-tools
+	url = https://aur.archlinux.org/mongodb-tools.git
+[submodule "aur-nonfree-sorah/PKGBUILDs/mongodb-bin"]
+	path = aur-nonfree-sorah/PKGBUILDs/mongodb-bin
+	url = https://aur.archlinux.org/mongodb-bin.git
+[submodule "aur-nonfree-sorah/PKGBUILDs/amazon-corretto-8"]
+	path = aur-sorah/PKGBUILDs/amazon-corretto-8
+	url = https://aur.archlinux.org/amazon-corretto-8.git
+[submodule "aur-nonfree-sorah/PKGBUILDs/amazon-corretto-11"]
+	path = aur-sorah/PKGBUILDs/amazon-corretto-11
+	url = https://aur.archlinux.org/amazon-corretto-11.git
+[submodule "aur-nonfree-sorah/PKGBUILDs/mongodb-bin-4.0"]
+	path = aur-nonfree-sorah/PKGBUILDs/mongodb-bin-4.0
+	url = https://aur.archlinux.org/mongodb-bin-4.0.git
