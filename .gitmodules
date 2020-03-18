@@ -131,3 +131,6 @@
 [submodule "aur-sorah/PKGBUILDs/terraform-lsp"]
 	path = aur-sorah/PKGBUILDs/terraform-lsp
 	url = https://aur.archlinux.org/terraform-lsp.git
+[submodule "aur-sorah/PKGBUILDs/etcd"]
+	path = aur-sorah/PKGBUILDs/etcd
+	url = https://aur.archlinux.org/etcd.git
