@@ -134,3 +134,6 @@
 [submodule "aur-sorah/PKGBUILDs/etcd"]
 	path = aur-sorah/PKGBUILDs/etcd
 	url = https://aur.archlinux.org/etcd.git
+[submodule "aur-sorah/PKGBUILDs/coil"]
+	path = aur-sorah/PKGBUILDs/coil
+	url = https://aur.archlinux.org/coil.git
