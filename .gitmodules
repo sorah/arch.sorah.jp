@@ -137,3 +137,9 @@
 [submodule "aur-sorah/PKGBUILDs/coil"]
 	path = aur-sorah/PKGBUILDs/coil
 	url = https://aur.archlinux.org/coil.git
+[submodule "aur-sorah/PKGBUILDs/step-ca-bin"]
+	path = aur-sorah/PKGBUILDs/step-ca-bin
+	url = aur@aur.archlinux.org:step-ca-bin.git
+[submodule "aur-sorah/PKGBUILDs/step-cli-bin"]
+	path = aur-sorah/PKGBUILDs/step-cli-bin
+	url = aur@aur.archlinux.org:step-cli-bin.git
