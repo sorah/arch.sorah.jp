@@ -143,3 +143,6 @@
 [submodule "aur-sorah/PKGBUILDs/step-cli-bin"]
 	path = aur-sorah/PKGBUILDs/step-cli-bin
 	url = aur@aur.archlinux.org:step-cli-bin.git
+[submodule "aur-sorah/PKGBUILDs/prometheus-remo-e-exporter"]
+	path = aur-sorah/PKGBUILDs/prometheus-remo-e-exporter
+	url = aur@aur.archlinux.org:prometheus-remo-e-exporter.git
