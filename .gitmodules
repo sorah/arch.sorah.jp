@@ -149,3 +149,12 @@
 [submodule "aur-sorah/PKGBUILDs/thanos"]
 	path = aur-sorah/PKGBUILDs/thanos
 	url = aur@aur.archlinux.org:thanos.git
+[submodule "aur-sorah/PKGBUILDs/targetcli-fb"]
+	path = aur-sorah/PKGBUILDs/targetcli-fb
+	url = aur@aur.archlinux.org:targetcli-fb
+[submodule "aur-sorah/PKGBUILDs/python-configshell-fb"]
+	path = aur-sorah/PKGBUILDs/python-configshell-fb
+	url = aur@aur.archlinux.org:python-configshell-fb.git
+[submodule "aur-sorah/PKGBUILDs/python-rtslib-fb"]
+	path = aur-sorah/PKGBUILDs/python-rtslib-fb
+	url = aur@aur.archlinux.org:python-rtslib-fb.git
