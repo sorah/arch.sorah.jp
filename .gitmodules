@@ -146,3 +146,6 @@
 [submodule "aur-sorah/PKGBUILDs/prometheus-remo-e-exporter"]
 	path = aur-sorah/PKGBUILDs/prometheus-remo-e-exporter
 	url = aur@aur.archlinux.org:prometheus-remo-e-exporter.git
+[submodule "aur-sorah/PKGBUILDs/thanos"]
+	path = aur-sorah/PKGBUILDs/thanos
+	url = aur@aur.archlinux.org:thanos.git
