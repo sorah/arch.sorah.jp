@@ -158,3 +158,6 @@
 [submodule "aur-sorah/PKGBUILDs/python-rtslib-fb"]
 	path = aur-sorah/PKGBUILDs/python-rtslib-fb
 	url = aur@aur.archlinux.org:python-rtslib-fb.git
+[submodule "aur-sorah/PKGBUILDs/kubelet-bin"]
+	path = aur-sorah/PKGBUILDs/kubelet-bin
+	url = aur@aur.archlinux.org:kubelet-bin
