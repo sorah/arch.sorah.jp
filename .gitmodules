@@ -164,3 +164,6 @@
 [submodule "aur-sorah/PKGBUILDs/kubectl-bin"]
 	path = aur-sorah/PKGBUILDs/kubectl-bin
 	url = aur@aur.archlinux.org:kubectl-bin
+[submodule "aur-sorah/PKGBUILDs/topolvm"]
+	path = aur-sorah/PKGBUILDs/topolvm
+	url = aur@aur.archlinux.org:topolvm
