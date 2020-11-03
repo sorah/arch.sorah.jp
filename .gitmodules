@@ -167,3 +167,6 @@
 [submodule "aur-sorah/PKGBUILDs/topolvm"]
 	path = aur-sorah/PKGBUILDs/topolvm
 	url = aur@aur.archlinux.org:topolvm
+[submodule "aur-sorah/PKGBUILDs/envoyproxy-bin"]
+	path = aur-sorah/PKGBUILDs/envoyproxy-bin
+	url = aur@aur.archlinux.org:envoyproxy-bin
