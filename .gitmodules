@@ -170,3 +170,6 @@
 [submodule "aur-sorah/PKGBUILDs/envoyproxy-bin"]
 	path = aur-sorah/PKGBUILDs/envoyproxy-bin
 	url = aur@aur.archlinux.org:envoyproxy-bin
+[submodule "aur-sorah/PKGBUILDs/cloud-sql-proxy-bin"]
+	path = aur-sorah/PKGBUILDs/cloud-sql-proxy-bin
+	url = aur@aur.archlinux.org:cloud-sql-proxy-bin.git
