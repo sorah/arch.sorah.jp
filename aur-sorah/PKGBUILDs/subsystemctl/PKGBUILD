@@ -1,6 +1,6 @@
 # Maintainer: Sorah Fukumori <her@sorah.jp>
 pkgname=subsystemctl
-pkgver=0.1.2
+pkgver=0.2.0
 pkgrel=1
 pkgdesc="Run systemd in WSL2"
 arch=('x86_64' 'aarch64')
@@ -20,4 +20,4 @@ package() {
   cd "subsystemctl-$pkgver"
   install -Dm6755 target/release/subsystemctl "${pkgdir}/usr/bin/subsystemctl"
 }
-sha512sums=('1c0772b4267fc3afaf41b3375a28df5ed08bb0753c1d95f7b2bd570d7c22bb8e16966845427ba6a27e6727841ce3ef577828e462dce791fc198c9dc3ae2f9b7e')
+sha512sums=('f5e1290c32b8748436cb025d61f27335e26c9960e9a5b9d67c9b2a0f2b322c078a60c7a38a549a5a2c2549b046c214c638893471e93b310d332b8cbf05ded68c')
