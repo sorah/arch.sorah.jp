@@ -179,3 +179,9 @@
 [submodule "aur-sorah/PKGBUILDs/mackerel-agent"]
 	path = aur-sorah/PKGBUILDs/mackerel-agent
 	url = https://aur.archlinux.org/mackerel-agent.git
+[submodule "aur-sorah/PKGBUILDs/mackerel-check-plugins-git"]
+	path = aur-sorah/PKGBUILDs/mackerel-check-plugins-git
+	url = https://aur.archlinux.org/mackerel-check-plugins-git.git
+[submodule "aur-sorah/PKGBUILDs/mackerel-agent-plugins-git"]
+	path = aur-sorah/PKGBUILDs/mackerel-agent-plugins-git
+	url = https://aur.archlinux.org/mackerel-agent-plugins-git.git
