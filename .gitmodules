@@ -176,3 +176,6 @@
 [submodule "aur-sorah/PKGBUILDs/needroleshere"]
 	path = aur-sorah/PKGBUILDs/needroleshere
 	url = aur@aur.archlinux.org:needroleshere.git
+[submodule "aur-sorah/PKGBUILDs/mackerel-agent"]
+	path = aur-sorah/PKGBUILDs/mackerel-agent
+	url = https://aur.archlinux.org/mackerel-agent.git
