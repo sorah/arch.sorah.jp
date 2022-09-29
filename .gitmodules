@@ -173,3 +173,6 @@
 [submodule "aur-sorah/PKGBUILDs/cloud-sql-proxy-bin"]
 	path = aur-sorah/PKGBUILDs/cloud-sql-proxy-bin
 	url = aur@aur.archlinux.org:cloud-sql-proxy-bin.git
+[submodule "aur-sorah/PKGBUILDs/needroleshere"]
+	path = aur-sorah/PKGBUILDs/needroleshere
+	url = aur@aur.archlinux.org:needroleshere.git
