@@ -61,7 +61,7 @@ Dir.chdir(archdir) do
   pkg_files.each do |pkg_path|
     puts "==> #{pkg_path}"
     pkg_local_path =   "./#{File.basename(pkg_path)}"
-    FileUtils.cp pkg_path, pkg_local_path if File.realpath(pkg_path) != File.realpath(pkg_local_path)
+    FileUtils.cp pkg_path, pkg_local_path
     cmd "gpg2", "--local-user", package_key, "--detach-sign", pkg_local_path
     cmd "guzuta", "files-add", "--repo-key", repo_key, pkg_local_path, "#{name}.files"
     cmd "guzuta", "repo-add", "--repo-key", repo_key, pkg_local_path, "#{name}.db"

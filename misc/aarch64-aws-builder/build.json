@@ -3,7 +3,7 @@
   "variables": {
     "pkgbuild_path": null,
     "subnet_id": null,
-    "instance_type": "a1.xlarge",
+    "instance_type": "c6g.large",
     "aws_region": "us-west-2"
   },
   "builders": [

@@ -15,14 +15,14 @@
         "filters": {
           "virtualization-type": "hvm",
           "root-device-type": "ebs",
-          "name": "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-arm64-server-*"
+          "name": "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-arm64-server-*"
         },
         "owners": ["099720109477"],
         "most_recent": true
       },
       "subnet_id": "{{user `subnet_id`}}",
       "associate_public_ip_address": true,
-      "instance_type": "a1.xlarge",
+      "instance_type": "t4g.medium",
       "ssh_username": "ubuntu",
       "ssh_port": 22,
       "ami_name": "arch-aarch64-builder-{{user `imagename`}}",

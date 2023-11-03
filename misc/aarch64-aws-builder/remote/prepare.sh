@@ -7,9 +7,9 @@ git clone https://git.archlinux.org/arch-install-scripts.git
   make && make install
 )
 
-curl -Ssf -L -o /root/rootfs.tar.gz http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
-curl -Ssf -L -o /root/rootfs.sig http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz.sig
-gpg --recv-key 68B3537F39A313B3E574D06777193F152BDBE6A6
+curl -Ssf -L -o /root/rootfs.tar.gz http://ca.us.mirror.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
+curl -Ssf -L -o /root/rootfs.sig http://ca.us.mirror.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz.sig
+gpg --keyserver hkps://keyserver.ubuntu.com --recv-key 68B3537F39A313B3E574D06777193F152BDBE6A6
 gpg --verify rootfs.sig rootfs.tar.gz
 
 (
