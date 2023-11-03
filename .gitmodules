@@ -11,9 +11,6 @@
 [submodule "aur-sorah/PKGBUILDs/prometheus-unbound-exporter-git"]
 	path = aur-sorah/PKGBUILDs/prometheus-unbound-exporter-git
 	url = https://aur.archlinux.org/prometheus-unbound-exporter-git.git
-[submodule "aur-sorah/PKGBUILDs/osquery-bin"]
-	path = aur-sorah/PKGBUILDs/osquery-bin
-	url = https://aur.archlinux.org/osquery-bin.git
 [submodule "aur-sorah/PKGBUILDs/kubernetes-bin"]
 	path = aur-sorah/PKGBUILDs/kubernetes-bin
 	url = https://aur.archlinux.org/kubernetes-bin.git
@@ -26,9 +23,6 @@
 [submodule "aur-sorah/PKGBUILDs/amazon-ecr-credential-helper"]
 	path = aur-sorah/PKGBUILDs/amazon-ecr-credential-helper
 	url = https://aur.archlinux.org/amazon-ecr-credential-helper.git
-[submodule "aur-sorah/PKGBUILDs/pigpio"]
-	path = aur-sorah/PKGBUILDs/pigpio
-	url = aur@aur.archlinux.org:pigpio.git
 [submodule "aur-sorah/PKGBUILDs/bgpstream"]
 	path = aur-sorah/PKGBUILDs/bgpstream
 	url = https://aur.archlinux.org/bgpstream.git
@@ -47,51 +41,6 @@
 [submodule "aur-sorah/PKGBUILDs/cfssl"]
 	path = aur-sorah/PKGBUILDs/cfssl
 	url = https://aur.archlinux.org/cfssl.git
-[submodule "aur-nonfree-sorah/PKGBUILDs/ffmpeg-full"]
-	path = aur-nonfree-sorah/PKGBUILDs/ffmpeg-full
-	url = https://aur.archlinux.org/ffmpeg-full.git
-[submodule "aur-nonfree-sorah/PKGBUILDs/decklink-sdk"]
-	path = aur-nonfree-sorah/PKGBUILDs/decklink-sdk
-	url = https://aur.archlinux.org/decklink-sdk.git
-[submodule "aur-sorah/PKGBUILDs/chromaprint-fftw"]
-	path = aur-sorah/PKGBUILDs/chromaprint-fftw
-	url = https://aur.archlinux.org/chromaprint-fftw.git
-[submodule "aur-sorah/PKGBUILDs/davs2"]
-	path = aur-sorah/PKGBUILDs/davs2
-	url = https://aur.archlinux.org/davs2.git
-[submodule "aur-nonfree-sorah/PKGBUILDs/flite1-patched"]
-	path = aur-nonfree-sorah/PKGBUILDs/flite1-patched
-	url = https://aur.archlinux.org/flite1-patched.git
-[submodule "aur-sorah/PKGBUILDs/libklvanc-git"]
-	path = aur-sorah/PKGBUILDs/libklvanc-git
-	url = https://aur.archlinux.org/libklvanc-git.git
-[submodule "aur-sorah/PKGBUILDs/openh264"]
-	path = aur-sorah/PKGBUILDs/openh264
-	url = https://aur.archlinux.org/openh264.git
-[submodule "aur-sorah/PKGBUILDs/libopenmpt-svn"]
-	path = aur-sorah/PKGBUILDs/libopenmpt-svn
-	url = https://aur.archlinux.org/libopenmpt-svn.git
-[submodule "aur-sorah/PKGBUILDs/shine"]
-	path = aur-sorah/PKGBUILDs/shine
-	url = https://aur.archlinux.org/shine.git
-[submodule "aur-sorah/PKGBUILDs/vo-amrwbenc"]
-	path = aur-sorah/PKGBUILDs/vo-amrwbenc
-	url = https://aur.archlinux.org/vo-amrwbenc.git
-[submodule "aur-sorah/PKGBUILDs/xavs"]
-	path = aur-sorah/PKGBUILDs/xavs
-	url = https://aur.archlinux.org/xavs.git
-[submodule "aur-sorah/PKGBUILDs/xavs2"]
-	path = aur-sorah/PKGBUILDs/xavs2
-	url = https://aur.archlinux.org/xavs2.git
-[submodule "aur-sorah/PKGBUILDs/pocketsphinx"]
-	path = aur-sorah/PKGBUILDs/pocketsphinx
-	url = https://aur.archlinux.org/pocketsphinx.git
-[submodule "aur-sorah/PKGBUILDs/sphinxbase"]
-	path = aur-sorah/PKGBUILDs/sphinxbase
-	url = https://aur.archlinux.org/sphinxbase.git
-[submodule "aur-sorah/PKGBUILDs/rockchip-mpp"]
-	path = aur-sorah/PKGBUILDs/rockchip-mpp
-	url = https://aur.archlinux.org/rockchip-mpp.git
 [submodule "aur-sorah/PKGBUILDs/ruby-bundler1.git"]
 	path = aur-sorah/PKGBUILDs/ruby-bundler1
 	url = https://aur.archlinux.org/ruby-bundler1.git
@@ -101,9 +50,6 @@
 [submodule "aur-sorah/PKGBUILDs/prometheus-remo-exporter"]
 	path = aur-sorah/PKGBUILDs/prometheus-remo-exporter
 	url = aur@aur.archlinux.org:prometheus-remo-exporter.git
-[submodule "aur-sorah/PKGBUILDs/mysql"]
-	path = aur-sorah/PKGBUILDs/mysql
-	url = aur@aur.archlinux.org:mysql.git
 [submodule "aur-sorah/PKGBUILDs/jsonnet"]
 	path = aur-sorah/PKGBUILDs/jsonnet
 	url = aur@aur.archlinux.org:jsonnet.git
