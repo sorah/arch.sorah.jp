@@ -1,79 +1,174 @@
 # Maintainer : Daniel Bermond <dbermond@archlinux.org>
 # Contributor: Iacopo Isimbaldi <isiachi@rhye.it>
 
-_svt_hevc_ver='1.4.3'
-_svt_av1_ver='0.8.4'
-_svt_vp9_ver='0.2.2'
-
-pkgname=ffmpeg-sorah
-pkgver=4.3.1
-pkgrel=4
+pkgname=ffmpeg-full
+pkgver=6.0
+pkgrel=5
+_svt_hevc_ver='eb24a06ba4ee4948f219a3246b88439a8090bd37'
+_svt_vp9_ver='aaa8140c8cdf6c073eaa6aaa5d003d1535fd0059'
 pkgdesc='Complete solution to record, convert and stream audio and video (all possible features including libfdk-aac)'
 arch=('x86_64')
 url='https://www.ffmpeg.org/'
 license=('custom: nonfree and unredistributable')
 depends=(
-    # official repositories:
-        'alsa-lib' 'avisynthplus' 'bzip2' 'frei0r-plugins' 'libgcrypt' 'gmp' 'gnutls'
-        'ladspa' 'libass' 'aom' 'aribb24' 'libbluray' 'libbs2b' 'libcaca' 'celt'
-        'libcdio-paranoia' 'codec2' 'dav1d' 'libdc1394' 'libavc1394' 'libfdk-aac'
-        'fontconfig' 'freetype2' 'fribidi' 'glslang' 'libgme' 'gsm' 'libiec61883'
-        'libilbc' 'jack' 'kvazaar' 'lensfun' 'libmodplug' 'lame' 'opencore-amr'
-        'openjpeg2' 'opus' 'pulseaudio' 'librabbitmq-c' 'rav1e' 'librsvg' 'rubberband'
-        'rtmpdump' 'snappy' 'libsoxr' 'speex' 'srt' 'libssh' 'svt-hevc' 'svt-av1'
-        'svt-vp9' 'tensorflow' 'tesseract' 'libtheora' 'twolame' 'v4l-utils'
-        'vid.stab' 'vmaf' 'libvorbis' 'libvpx' 'wavpack' 'libwebp' 'x264' 'x265'
-        'libxcb' 'xvidcore' 'libxml2' 'zimg' 'zeromq' 'zvbi' 'lv2' 'lilv' 'xz'
-        'libmysofa' 'openal' 'ocl-icd' 'libgl' 'sndio' 'sdl2' 'vapoursynth'
-        'vulkan-icd-loader' 'libxv' 'libx11'  'libxext' 'zlib'
-        'libdrm' 'intel-media-sdk' 'libva' 'libvdpau'
-        # 'libomxil-bellagio' 
-        # 'cuda'
-    # AUR:
-        'chromaprint-fftw' 'davs2' 'flite1-patched' 'libklvanc-git' 'openh264'
-        'libopenmpt-svn' 'shine' 'vo-amrwbenc' 'xavs' 'xavs2' 'pocketsphinx'
-        'rockchip-mpp'
+    'alsa-lib'
+    'aom'
+    'aribb24'
+    'avisynthplus'
+    'bzip2'
+    'celt'
+    'codec2'
+    'cuda'
+    'dav1d'
+    'flite1'
+    'fontconfig'
+    'freetype2'
+    'frei0r-plugins'
+    'fribidi'
+    'glslang'
+    'gmp'
+    'gnutls'
+    'gsm'
+    'jack'
+    'kvazaar'
+    'ladspa'
+    'lame'
+    'libavc1394'
+    'lcms2'
+    'lensfun-git'
+    'libass'
+    'libbluray'
+    'libbs2b'
+    'libcaca'
+    'libcdio-paranoia'
+    'libdc1394'
+    'libdrm'
+    'libfdk-aac'
+    'libgcrypt'
+    'libgl'
+    'libgme'
+    'libiec61883'
+    'libilbc'
+    'libjxl'
+    'libmodplug'
+    'libmysofa'
+    'libomxil-bellagio'
+    'libopenmpt'
+    'libplacebo'
+    'libpulse'
+    'librabbitmq-c'
+    'librsvg'
+    'libsoxr'
+    'libssh'
+    'libtheora'
+    'libva'
+    'libvdpau'
+    'libvorbis'
+    'libvpx'
+    'libx11'
+    'libxcb'
+    'libxext'
+    'libxml2'
+    'libxv'
+    'libwebp'
+    'lilv'
+    'lv2'
+    'ocl-icd'
+    'onevpl'
+    'onevpl-intel-gpu'
+    'openal'
+    'opencore-amr'
+    'openh264'
+    'openjpeg2'
+    'opus'
+    'rav1e'
+    'rtmpdump'
+    'rubberband'
+    'sdl2'
+    'smbclient'
+    'snappy'
+    'sndio'
+    'speex'
+    'spirv-tools'
+    'srt'
+    'svt-av1'
+    'svt-hevc'
+    'svt-vp9'
+    'tesseract'
+    'twolame'
+    'v4l-utils'
+    'vapoursynth'
+    'vid.stab'
+    'vmaf'
+    'vulkan-icd-loader'
+    'x264'
+    'x265'
+    'xvidcore'
+    'xz'
+    'zeromq'
+    'zimg'
+    'zlib'
+    'zvbi'
+    'chromaprint-fftw'
+    'davs2'
+    'libklvanc-git'
+    'librist'
+    'rockchip-mpp'
+    'shine'
+    'uavs3d-git'
+    'vo-amrwbenc'
+    'xavs'
+    'xavs2'
 )
-makedepends=(
-    # official repositories:
-        'nasm' 'opencl-headers' 'ffnvcodec-headers' 'ffnvcodec-headers' 'clang'
-)
+makedepends=('clang' 'amf-headers' 'ffnvcodec-headers' 'nasm' 'opencl-headers'
+             'vulkan-headers' 'decklink-sdk')
 provides=('libavcodec.so' 'libavdevice.so' 'libavfilter.so' 'libavformat.so'
-          'libavutil.so' 'libpostproc.so' 'libavresample.so' 'libswscale.so'
-          'libswresample.so' 'ffmpeg')
+          'libavutil.so' 'libpostproc.so' 'libswscale.so' 'libswresample.so'
+          'ffmpeg')
 conflicts=('ffmpeg')
 source=("https://ffmpeg.org/releases/ffmpeg-${pkgver}.tar.xz"{,.asc}
-        "020-ffmpeg-add-svt-hevc-${_svt_hevc_ver}.patch"::"https://raw.githubusercontent.com/OpenVisualCloud/SVT-HEVC/v${_svt_hevc_ver}/ffmpeg_plugin/0001-lavc-svt_hevc-add-libsvt-hevc-encoder-wrapper.patch"
-        "030-ffmpeg-add-svt-hevc-docs-${_svt_hevc_ver}.patch"::"https://raw.githubusercontent.com/OpenVisualCloud/SVT-HEVC/v${_svt_hevc_ver}/ffmpeg_plugin/0002-doc-Add-libsvt_hevc-encoder-docs.patch"
-        "040-ffmpeg-add-svt-av1-${_svt_av1_ver}.patch"::"https://raw.githubusercontent.com/OpenVisualCloud/SVT-AV1/v${_svt_av1_ver}/ffmpeg_plugin/0001-Add-ability-for-ffmpeg-to-run-svt-av1.patch"
-        "050-ffmpeg-add-svt-vp9-${_svt_vp9_ver}.patch"::"https://raw.githubusercontent.com/OpenVisualCloud/SVT-VP9/v${_svt_vp9_ver}/ffmpeg_plugin/master-0001-Add-ability-for-ffmpeg-to-run-svt-vp9.patch"
+        "010-ffmpeg-add-svt-hevc-g${_svt_hevc_ver:0:7}.patch"::"https://raw.githubusercontent.com/OpenVisualCloud/SVT-HEVC/${_svt_hevc_ver}/ffmpeg_plugin/master-0001-lavc-svt_hevc-add-libsvt-hevc-encoder-wrapper.patch"
+        #"020-ffmpeg-add-svt-hevc-docs-g${_svt_hevc_ver:0:7}.patch"::"https://raw.githubusercontent.com/OpenVisualCloud/SVT-HEVC/${_svt_hevc_ver}/ffmpeg_plugin/0002-doc-Add-libsvt_hevc-encoder-docs.patch"
+        "030-ffmpeg-add-svt-vp9-g${_svt_vp9_ver:0:7}.patch"::"https://raw.githubusercontent.com/OpenVisualCloud/SVT-VP9/${_svt_vp9_ver}/ffmpeg_plugin/master-0001-Add-ability-for-ffmpeg-to-run-svt-vp9.patch"
+        '040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch'
+        '060-ffmpeg-fix-segfault-with-avisynthplus.patch'
+        '070-ffmpeg-binutils2.41-fix.patch'::'https://git.ffmpeg.org/gitweb/ffmpeg.git/patch/effadce6c756247ea8bae32dc13bb3e6f464f0eb'
+        '080-ffmpeg-nvenc-fix-010.patch'::'https://git.ffmpeg.org/gitweb/ffmpeg.git/patch/03823ac0c6a38bd6ba972539e3203a592579792f'
+        '090-ffmpeg-nvenc-fix-020.patch'::'https://git.ffmpeg.org/gitweb/ffmpeg.git/patch/d2b46c1ef768bc31ba9180f6d469d5b8be677500'
         'LICENSE')
-sha256sums=('ad009240d46e307b4e03a213a0f49c11b650e445b1f8be0dda2a9212b34d2ffb'
+sha256sums=('57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082'
             'SKIP'
-            '878757eb6d7072521caaeb71f1453ec3fc0f91a12936ef302e1625184787c6a6'
-            '1499e419dda72b1604dc5e3959668f3843292ff56bfba78734e31510ba576de0'
-            '5e960b4dab495437082d0838a40a8cae9b67d1cef1ffd57da960afaa2bfd3719'
-            'b74be6d805672210e226e7c0b403f88b0ee8a53c732c9bdc873c4b44aeb75c96'
+            'e8fdc940474f3819b9a8d30cab8164774584c051322acb6194bcb03d56e8175a'
+            'd8b91ea5f07d0208cbe0290567083808708014a1953fda322d13cb619349c9ee'
+            'd1ad786df86354d218a70b306a50961736c0a6e2d2716bf8de3db31d79957df9'
+            'bf563193f450ece58a93db6840c0db33875df945fa81477b9b02fb209d3bf57a'
+            'fec03e133521486ca258ae34ddf093eb6aab23f848c4332c367aadbfeaefda04'
+            'aa8c43efac4c0dfc462af887b56bdb177cf09dd8b2dffea5c83a4dbfc35e0917'
+            '3fe87a3bd193f16a191ff795ae8ad62d930e48d7b379fc627043717a6bdf3e93'
             '04a7176400907fd7db0d69116b99de49e582a6e176b3bfb36a03e50a4cb26a36')
 validpgpkeys=('FCF986EA15E6E293A5644F10B4322F04D67658D8')
 
 prepare() {
-    rm -f "ffmpeg-${pkgver}/libavcodec/"libsvt_{hevc,av1,vp9}.c
-    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/020-ffmpeg-add-svt-hevc-${_svt_hevc_ver}.patch"
-    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/030-ffmpeg-add-svt-hevc-docs-${_svt_hevc_ver}.patch"
-    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/040-ffmpeg-add-svt-av1-${_svt_av1_ver}.patch"
-    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/050-ffmpeg-add-svt-vp9-${_svt_vp9_ver}.patch"
+    rm -f "ffmpeg-${pkgver}/libavcodec/"libsvt_{hevc,vp9}.c
+    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/010-ffmpeg-add-svt-hevc-g${_svt_hevc_ver:0:7}.patch"
+    #patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/020-ffmpeg-add-svt-hevc-docs-g${_svt_hevc_ver:0:7}.patch"
+    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/030-ffmpeg-add-svt-vp9-g${_svt_vp9_ver:0:7}.patch"
+    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch"
+    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/060-ffmpeg-fix-segfault-with-avisynthplus.patch"
+    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/070-ffmpeg-binutils2.41-fix.patch"
+    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/080-ffmpeg-nvenc-fix-010.patch"
+    patch -d "ffmpeg-${pkgver}" -Np1 -i "${srcdir}/090-ffmpeg-nvenc-fix-020.patch"
 }
 
 build() {
     cd "ffmpeg-${pkgver}"
-    
     printf '%s\n' '  -> Running ffmpeg configure script...'
     
     ./configure \
         --prefix='/usr' \
-        --extra-cflags='-I/usr/include/tensorflow' \
-        --extra-ldflags="$_ldflags" \
+        --extra-cflags='-I/opt/cuda/include' \
+        --extra-ldflags='-L/opt/cuda/lib64' \
+        --enable-lto \
         \
         --disable-rpath \
         --enable-gpl \
@@ -82,8 +177,8 @@ build() {
         --enable-shared \
         --disable-static \
         --disable-stripping \
+        --disable-htmlpages \
         --enable-gray \
-        --enable-avresample \
         \
         --enable-alsa \
         --enable-avisynth \
@@ -94,33 +189,73 @@ build() {
         --enable-gmp \
         --enable-gnutls \
         --enable-iconv \
+        --enable-ladspa \
+        --enable-lcms2 \
         --enable-libaom \
         --enable-libaribb24 \
         --enable-libass \
         --enable-libbluray \
+        --enable-libbs2b \
+        --enable-libcaca \
+        --enable-libcelt \
+        --enable-libcdio \
+        --enable-libcodec2 \
         --enable-libdav1d \
         --enable-libdavs2 \
+        --enable-libdc1394 \
         --enable-libfdk-aac \
+        --enable-libflite \
         --enable-fontconfig \
         --enable-libfreetype \
+        --enable-libfribidi \
+        --enable-libglslang \
+        --enable-libgme \
+        --enable-libgsm \
+        --enable-libiec61883 \
+        --enable-libilbc \
+        --enable-libjack \
+        --enable-libjxl \
+        --enable-libklvanc \
+        --enable-libkvazaar \
+        --enable-liblensfun \
+        --enable-libmodplug \
         --enable-libmp3lame \
+        --enable-libopencore-amrnb \
+        --enable-libopencore-amrwb \
         --disable-libopencv \
         --enable-libopenh264 \
         --enable-libopenjpeg \
+        --enable-libopenmpt \
+        --disable-libopenvino \
         --enable-libopus \
+        --enable-libplacebo \
         --enable-libpulse \
+        --enable-librabbitmq \
+        --enable-librav1e \
+        --enable-librist \
         --enable-librsvg \
         --enable-librubberband \
         --enable-librtmp  \
-        --disable-libsmbclient \
+        --enable-libshine \
+        --enable-libsmbclient \
         --enable-libsnappy \
         --enable-libsoxr \
+        --enable-libspeex \
+        --enable-libsrt \
         --enable-libssh \
+        --enable-libsvtav1 \
+        --enable-libsvthevc \
+        --enable-libsvtvp9 \
+        --disable-libtensorflow \
+        --enable-libtesseract \
         --enable-libtheora \
         --disable-libtls \
         --enable-libtwolame \
+        --enable-libuavs3d \
         --enable-libv4l2 \
+        --enable-libvidstab \
         --enable-libvmaf \
+        --enable-libvo-amrwbenc \
         --enable-libvorbis \
         --enable-libvpx \
         --enable-libwebp \
@@ -128,6 +263,10 @@ build() {
         --enable-libx265 \
         --enable-libxavs \
         --enable-libxavs2 \
+        --enable-libxcb \
+        --enable-libxcb-shm \
+        --enable-libxcb-xfixes \
+        --enable-libxcb-shape \
         --enable-libxvid \
         --enable-libxml2 \
         --enable-libzimg \
@@ -135,34 +274,36 @@ build() {
         --enable-libzvbi \
         --enable-lv2 \
         --enable-lzma \
+        --enable-decklink \
         --disable-mbedtls \
+        --enable-libmysofa \
+        --enable-openal \
+        --enable-opencl \
         --enable-opengl \
         --disable-openssl \
-        --enable-pocketsphinx \
+        --disable-pocketsphinx \
         --enable-sndio \
         --enable-sdl2 \
         --enable-vapoursynth \
+        --enable-vulkan \
         --enable-xlib \
         --enable-zlib \
-        --enable-libsvtvp9 \
-        --enable-libsvthevc \
-        --enable-libsvtav1 \
         \
+        --enable-amf \
+        --enable-cuda-nvcc \
+        --enable-cuda-llvm \
+        --enable-cuvid \
+        --enable-ffnvcodec \
         --enable-libdrm \
-        --enable-libmfx \
+        --enable-libvpl \
+        --enable-libnpp \
+        --enable-nvdec \
+        --enable-nvenc \
+        --enable-omx \
         --enable-rkmpp \
         --enable-v4l2-m2m \
         --enable-vaapi \
         --enable-vdpau
-        #--enable-omx \
-        #--enable-omx-rpi \
-        # --enable-ffnvcodec \
-        # --enable-cuvid \
-        # --enable-libnpp \
-        # --enable-nvdec \
-        # --enable-nvenc \
-
-        
     make
     make tools/qt-faststart
 }
