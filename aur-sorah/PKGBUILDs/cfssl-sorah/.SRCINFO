@@ -1,0 +1,19 @@
+pkgbase = cfssl-sorah
+	pkgdesc = CloudFlare PKI and TLS toolkit (sorah's fork, built with PKCS #11 support)
+	pkgver = 1.6.5.r28.gc628add4
+	pkgrel = 1
+	url = https://github.com/sorah/cfssl
+	arch = i686
+	arch = x86_64
+	license = BSD-2-Clause
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	provides = cfssl
+	conflicts = cfssl
+	source = cfssl::git+https://github.com/sorah/cfssl.git#branch=sorah
+	source = cfssl-tags::git+https://github.com/cloudflare/cfssl.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = cfssl-sorah

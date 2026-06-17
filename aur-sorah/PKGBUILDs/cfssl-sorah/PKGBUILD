@@ -1,0 +1,68 @@
+# Maintainer: Sorah Fukumori <her@sorah.jp>
+# Contributor: Christian Rebischke <chris.rebischke@archlinux.org>
+# Contributor: Konstantin Gribov <grossws@gmail.com>
+
+pkgname=cfssl-sorah
+_gitname=cfssl
+pkgver=1.6.5.r28.gc628add4
+pkgrel=1
+pkgdesc="CloudFlare PKI and TLS toolkit (sorah's fork, built with PKCS #11 support)"
+arch=('i686' 'x86_64')
+url="https://github.com/sorah/cfssl"
+license=('BSD-2-Clause')
+depends=('glibc')
+makedepends=('go' 'git')
+provides=('cfssl')
+conflicts=('cfssl')
+
+source=(
+  "${_gitname}::git+https://github.com/sorah/cfssl.git#branch=sorah"
+  "${_gitname}-tags::git+https://github.com/cloudflare/cfssl.git"
+)
+sha256sums=('SKIP'
+            'SKIP')
+
+_binaries=(cfssl cfssljson cfssl-bundle cfssl-certinfo cfssl-newkey cfssl-scan mkbundle multirootca)
+
+prepare() {
+  # The sorah fork is pushed without upstream tags, so import them from
+  # the cloudflare clone. This is a fetch from a local path (both repos
+  # are already on disk after the download phase), so it needs no network
+  # and works inside a chroot build. pkgver() can then anchor describe on
+  # the upstream version tag (e.g. v1.6.5).
+  git -C "${srcdir}/${_gitname}" fetch --tags "${srcdir}/${_gitname}-tags"
+}
+
+pkgver() {
+  cd "${srcdir}/${_gitname}"
+  # Prefer the upstream tag (e.g. v1.6.5), producing 1.6.5.rN.gHASH. Fall
+  # back to a tagless rN.gHASH if no tag is reachable for some reason.
+  if git describe --long --tags >/dev/null 2>&1; then
+    git describe --long --tags | sed -e 's/\([^-]*-g\)/r\1/;s/-/./g' -e 's/^v//'
+  else
+    printf 'r%s.g%s' "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+  fi
+}
+
+build() {
+  cd "${srcdir}/${_gitname}"
+  # The fork's signer/pkcs11 package is gated behind the `pkcs11` build
+  # tag and cgo; enable both so the binaries gain PKCS #11 support.
+  export CGO_ENABLED=1
+  make VERSION="${pkgver}-${pkgrel}" GOFLAGS="-mod=vendor -tags=pkcs11"
+}
+
+package() {
+  cd "${srcdir}/${_gitname}"
+
+  for bin in ${_binaries[@]} ; do
+    install -m755 -D -t "${pkgdir}/usr/bin/" bin/${bin}
+  done
+
+  # special case to avoid clash with `mono`
+  mv ${pkgdir}/usr/bin/mkbundle ${pkgdir}/usr/bin/cfssl-mkbundle
+
+  install -m644 -D LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
+
+# vim: et: sw=2: sts=2:
